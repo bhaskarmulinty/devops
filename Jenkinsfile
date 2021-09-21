@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'echo " This is testing from Jenkins File"'
+                sh '/usr/bin/mkdir /tmp/jenkinsfile'
             }
         }
     }
