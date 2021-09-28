@@ -1,10 +1,23 @@
-pipeline {
-    agent { docker { image 'maven:3.3.3' } }
-    stages {
-        stage('build') {
-            steps {
-                sh '/usr/bin/mkdir /tmp/jenkinsfile'
-            }
+pipeline { 
+agent any 
+    stages { 
+        stage ('Build') {
+            echo " This is build stage"
+ 
         }
-    }
-}
+        stage ('Test') {
+            echo " this is test stage"
+        
+        }
+        stage ('QA') { 
+        
+        }
+        stage ('Deploy') { 
+        
+        }
+        stage ('Monitor') { 
+ 
+        }
+ 
+    }           
+ }
