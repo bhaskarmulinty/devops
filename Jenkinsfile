@@ -6,5 +6,10 @@ pipeline {
                 echo 'Welcome to LambdaTest'
             }
         }
+        stage('Build Stage') {
+            steps { 
+                echo 'Welcome to Build Stage'
+            }
+        }
     }
 }
