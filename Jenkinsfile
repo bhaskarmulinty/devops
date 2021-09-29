@@ -1,7 +1,7 @@
 pipeline{
     agent any
     stages{
-        stage('Terraform Version'){
+        stage('Terraform version info'){
             steps{
                 sh '/usr/bin/terraform version'
             }
