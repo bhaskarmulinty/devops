@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('Terraform version info'){
             steps{
-                echo "My client id is $AZURE_CLIENT_ID"
+                sh '/usr/bin/terraform version'
             }
         }
         stage('Git'){
