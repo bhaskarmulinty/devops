@@ -25,8 +25,8 @@ pipeline{
         }
         stage('terraform apply'){
             steps{
-                echo "++++++  Terraform Plan "
-                sh '/usr/bin/terraform plan'
+                echo "++++++  Terraform apply "
+                sh '/usr/bin/terraform apply --auto-approve'
             }
         }
     }
