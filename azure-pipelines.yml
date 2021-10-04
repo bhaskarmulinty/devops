@@ -1,0 +1,8 @@
+pool:
+  vmImage: 'Ubuntu-16.04'
+
+steps:
+- task: terraformInstaller@0
+  inputs:
+    terraformVersion: '0.13.4'
+  displayName: Install Terraform
