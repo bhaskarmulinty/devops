@@ -7,10 +7,11 @@ trigger:
 - master
 
 pool:
-  default
+  name: Default
 
 steps:
 - task: TerraformCLI@0
+  displayName: 'terraform version'
   inputs:
     command: 'version'
     allowTelemetryCollection: true
