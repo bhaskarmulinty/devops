@@ -16,4 +16,3 @@ steps:
     args: -var=environment=demo -out=tfplan.out
   displayName: Terraform Plan
 
-- 
