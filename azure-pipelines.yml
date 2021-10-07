@@ -2,16 +2,7 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 steps:
-
-- task: AzureCLI@2
-  displayName: Azure CLI
+- task: terraformInstaller@0
   inputs:
-    azureSubscription: terraform
-    scriptType: ps
-    scriptLocation: inlineScript
-    inlineScript: |
-      az --version
-      az account show
-
-    
-
+    terraformVersion: '0.13.4'
+  displayName: Install Terraform
