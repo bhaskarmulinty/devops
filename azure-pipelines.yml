@@ -2,7 +2,18 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 steps:
-- task: terraformInstaller@0
+- task: terraform@0
   inputs:
-    terraformVersion: '0.13.4'
-  displayName: Install Terraform
+    command: 'init'
+    providerAzureConnectedServiceName: 'terraform'
+    backendAzureProviderStorageAccountName: 'mtcdenterraformsandbox'
+  displayName: Terraform Init
+    
+- task: terraform@0
+  inputs:
+    command: 'plan'
+    providerAzureConnectedServiceName: 'terraform'
+    args: -var=environment=demo -out=tfplan.out
+  displayName: Terraform Plan
+
+- 
