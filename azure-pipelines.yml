@@ -2,16 +2,16 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 steps:
-- task: TerraformCLI@0
+
+- task: AzureCLI@2
+  displayName: Azure CLI
   inputs:
-    command: 'init'
-    allowTelemetryCollection: true
-  displayName: Terraform Init
-- task: TerraformCLI@0
-  inputs:
-    command: plan
-    allowTelemetryCollection: true
-  displayName: terraform plan
+    azureSubscription: terraform
+    scriptType: ps
+    scriptLocation: inlineScript
+    inlineScript: |
+      az --version
+      az account show
 
     
 
