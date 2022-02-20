@@ -4,17 +4,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                echo 'Terraform init..'
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                echo 'Terraform Plan..'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                echo 'Terraform Apply....'
             }
         }
     }
