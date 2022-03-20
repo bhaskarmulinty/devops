@@ -8,6 +8,19 @@ pipeline {
                sh ('terraform version')
             }
         }
+        stage('init') {
+            steps {
+                echo 'Checking Terraform Version '
+               sh ('terraform init')
+            }
+        }
+        stage('Plan') {
+            steps {
+                echo 'Checking Terraform Version '
+               sh ('terraform plan')
+            }
+        }
+       
        
     }
 }
