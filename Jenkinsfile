@@ -5,18 +5,9 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Checking Terraform Version '
-                terraform version
+               sh ('terraform version')
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Terraform Plan..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Terraform Apply....'
-            }
-        }
+       
     }
 }
